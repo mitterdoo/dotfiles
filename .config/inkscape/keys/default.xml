@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<keys
+   name="User Shortcuts">
+  <bind
+     gaction="app.path-union"
+     keys="&lt;Alt&gt;u" />
+  <modifier
+     action="canvas-pan-y"
+     modifiers="Ctrl" />
+  <modifier
+     action="canvas-zoom"
+     modifiers="" />
+</keys>

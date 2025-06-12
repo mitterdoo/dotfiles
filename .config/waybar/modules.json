@@ -1,0 +1,204 @@
+//  __  __           _       _            
+// |  \/  | ___   __| |_   _| | ___  ___  
+// | |\/| |/ _ \ / _` | | | | |/ _ \/ __| 
+// | |  | | (_) | (_| | |_| | |  __/\__ \ 
+// |_|  |_|\___/ \__,_|\__,_|_|\___||___/ 
+//                                        
+//  
+// by Stephan Raabe (2023) 
+// ----------------------------------------------------- 
+//
+{
+    // Workspaces
+    "hyprland/workspaces" : {
+        "on-click": "activate",
+        "active-only": false,
+        "all-outputs": true,
+        "format": " {} ",
+        "format-icons": {
+			"urgent": "",
+			"active": "",
+			"default": ""
+        },
+        "persistent-workspaces": {
+              "*": [1]
+        }       
+    },
+
+    // fuzzel Application Launcher
+    "custom/appmenu": {
+        "format": "Apps",
+        "on-click": "fuzzel",
+    },
+    
+    // Power Menu
+    "custom/exit": {
+        "format": "PWR",
+        "tooltip-format": "Powermenu",
+        "on-click": "~/.config/custom/scripts/powermenu.sh",
+        "tooltip": false
+    },
+
+    
+    // System tray
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+
+    // Clock
+    "clock": {
+        // "timezone": "America/Los_Angeles",
+		"format-alt": "{:%I:%M %p }",
+		"tooltip-format": "{:%D}",
+		"format": "{:%D %I:%M %p }",
+    },
+
+	"custom/update": {
+		"exec": "~/.config/custom/scripts/update.sh",
+		"return-type": "json",
+		"interval": 900,
+		"signal": 13,
+		"on-click": "hyprctl dispatch exec [float] 'kitty -e ~/.config/custom/scripts/update-run.sh'",
+		"on-click-right": "pkill -RTMIN+13 waybar"
+	},
+
+    // System
+    "custom/system": {
+        "format": "",
+        "tooltip": false
+    },
+
+	"custom/zulu-clock": {
+		"exec": "~/.config/custom/scripts/zulu-clock.sh",
+		"return-type": "",
+		"interval": 1
+	},
+	
+	"custom/gpu-usage": {
+		// "format": "GPU {usage}%/{temp}*",
+		"exec": "~/.config/custom/scripts/gpu-usage.sh",
+		"return-type": "json",
+		"interval": 1
+	},
+
+    // CPU
+    "cpu": {
+        "format": "CPU <span color='#00FF00'>{usage}</span><span color='#00FFFF'>%</span>",
+        "on-click": "hyprctl dispatch exec [float] 'kitty -e htop'"
+    },
+
+    // Memory
+    "memory": {
+        "format": "RAM <span color='#00FF00'>{percentage}</span><span color='#00FFFF'>%</span> / <span color='#00FF00'>{used:0.1f}</span><span color='#00FFFF'> GB</span>",
+        "on-click": "hyprctl dispatch exec [float] 'kitty -e htop --sort-key=PERCENT_MEM'",
+		"interval": 10
+    },
+
+    // Harddisc space used
+    "disk": {
+        "interval": 30,
+        "format": "D {percentage_used}% ",
+        "path": "/",
+        "on-click": "hyprctl dispatch exec [float] 'kitty -e htop'"
+    }, 
+
+    "hyprland/language": {
+        "format": "/ K {short}"
+    },
+
+    // Group Hardware
+    "group/hardware": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 300,
+            "children-class": "not-memory",
+            "transition-left-to-right": false
+        },        
+        "modules": [
+            "custom/system",
+            "disk",
+            "cpu",
+            "memory",
+            "hyprland/language"
+        ]
+    },
+    
+   // Network
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": "NET <span color='#FF7F00'>WIFI</span> <span color='#00FF00'>{signalStrength}</span><span color='#00FFFF'>%</span>",
+        "format-ethernet": "NET <span color='#00FF00'>ETH</span>",
+        "format-disconnected": "NET <span color='#FF0000'>DISC</span>", //An empty format will hide the module.
+        "tooltip-format": " {ifname} via {gwaddri}",
+        "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname} ({ipaddr}/{cidr})",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50,
+        "on-click": "hyprctl dispatch exec [float] 'kitty -e nmtui'"
+    },
+
+    // Battery
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}   {capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-alt": "{icon}  {time}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": [" ", " ", " ", " ", " "]
+    },
+
+    // pipewire
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "SND <span color='#00FF00'>{volume}</span><span color='#00FFFF'>%</span>",
+        "format-bluetooth": "SND <span color='#00FF00'>{volume}</span><span color='#00FFFF'>% BLT</span> <span color='#00FF00'>{format_source}</span>",
+        "format-bluetooth-muted": "SND <span color='#FF7F00'>MUT</span> <span color='#00FF00'>{volume}</span><span color='#00FFFF'>% BLT</span> <span color='#00FF00'>{format_source}</span>",
+        "format-muted": "SND <span color='#FF7F00'>MUT</span> <span color='#00FF00'>{volume}</span><span color='#00FFFF'>%</span>",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [" ", " "]
+        },
+        "on-click": "hyprctl dispatch exec [float] pwvucontrol",
+        "on-click-right": "hyprctl dispatch exec [float] qpwgraph"
+    },
+
+    // Bluetooth
+    "bluetooth": {
+		"format": "",
+        "format-disabled": "",
+        "format-off": "",
+        "interval": 30,
+        "on-click": "hyprctl dispatch exec [float] blueman-manager",
+        "format-no-controller": ""
+    },
+
+    // Other
+    "user": {
+        "format": "{user}",
+        "interval": 60,
+        "icon": false,
+    },
+
+    // Idle Inhibator
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "tooltip": true,
+        "format-icons":{
+            "activated": "",
+            "deactivated": ""
+        },
+        "on-click-right": "hyprlock"        
+    }
+}

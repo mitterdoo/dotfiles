@@ -1,0 +1,138 @@
+* {
+	border: none;
+	border-radius: 0;
+	min-height: 0;
+}
+
+#waybar {
+    font-family: "AIR3508-ZS", "AIR3508", sans-serif;
+	font-weight: normal;
+    font-size: 12px;
+}
+
+window#waybar {
+    background: #000000;
+    color: white;
+}
+
+tooltip {
+  background: rgba(43, 48, 59, 0.5);
+  border: 1px solid rgba(100, 114, 125, 0.5);
+  font-family: sans-serif;
+}
+tooltip label {
+  color: white;
+  font-family: sans-serif;
+}
+
+@keyframes flash
+{
+	50%
+	{
+		background-color:black;
+		color: #FF7F00;
+	}
+}
+
+#workspaces button {
+	margin: 0 2px;
+	padding: 0 1px;
+    color: #00FFFF;
+
+
+}
+
+#workspaces button:hover {
+	color: black;
+	background: #00FFFF;
+}
+#workspaces button.active {
+	/*
+	 * color: black;
+	 * background: #00FF00;
+	*/
+
+	color: #00FF00;
+	background: black;
+	font-weight: bold;
+	box-shadow: inset 0 -1 #00FF00;
+}
+
+#workspaces button.urgent {
+	color: black;
+	background: #FF7F00;
+	animation: flash 0.6s steps(2) infinite;
+}
+
+#tray
+{
+	border: 1px solid white;
+	padding: 2px 6px;
+}
+
+#tray menu
+{
+	font-family: sans-serif;
+}
+
+.module
+{
+	/* padding: 0 10px;*/
+}
+
+
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid white;
+}
+
+#clock {
+	padding-right: 10px;
+
+	color: #00FF00;
+}
+
+#battery {
+    background-color: #ffffff;
+    color: black;
+}
+
+#battery.charging {
+    color: white;
+    background-color: #26A65B;
+}
+
+#custom-exit {
+	color: #00FFFF;
+
+	padding: 0 10px;
+	margin-left: 10px;
+}
+
+#custom-exit:hover {
+	color: black;
+	background-color: #00FFFF;
+}
+
+#custom-update
+{
+	color: #FF7F00;
+}
+
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
