@@ -18,6 +18,8 @@ set scrolloff=4
 set signcolumn=auto
 set noshowmode
 
+set mouse=a " legacy needs
+
 set tags+=./.tags
 
 nnoremap <C-j> :cnext<cr>
