@@ -1,4 +1,4 @@
-source $VIMRUNTIME/defaults.vim
+" source $VIMRUNTIME/defaults.vim
 set tabstop=4
 set shiftwidth=4
 set softtabstop=0
@@ -7,6 +7,9 @@ set softtabstop=0
 " open. thanks vim 
 set hidden
 
+syntax on
+colorscheme unokai
+
 set noexpandtab
 
 set relativenumber
@@ -14,4 +17,8 @@ set number
 set scrolloff=4
 set signcolumn=auto
 set noshowmode
-" colorscheme unokai
+
+set tags+=./.tags
+
+nnoremap <C-j> :cnext<cr>
+nnoremap <C-k> :cprev<cr>
