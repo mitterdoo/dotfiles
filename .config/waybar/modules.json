@@ -127,7 +127,7 @@
    // Network
     "network": {
         "format": "{ifname}",
-        "format-wifi": "NET <span color='#FF7F00'>WIFI</span> <span color='#00FF00'>{signalStrength}</span><span color='#00FFFF'>%</span>",
+        "format-wifi": "NET <span color='#00FFFF'>WIFI</span> <span color='#00FF00'>{signalStrength}</span><span color='#00FFFF'>%</span>",
         "format-ethernet": "NET <span color='#00FF00'>ETH</span>",
         "format-disconnected": "NET <span color='#FF0000'>DISC</span>", //An empty format will hide the module.
         "tooltip-format": " {ifname} via {gwaddri}",
@@ -142,15 +142,15 @@
     "battery": {
         "states": {
             // "good": 95,
-            "warning": 30,
+			"warning": 30,
             "critical": 15
         },
-        "format": "{icon}   {capacity}%",
-        "format-charging": "  {capacity}%",
-        "format-plugged": "  {capacity}%",
+		"format": "BAT <span color='#00FF00'>{capacity}</span><span color='#00FFFF'>%</span>",
+		"format-warning": "BAT <span color='#FF7F00'>{capacity}</span><span color='#00FFFF'>%</span>",
+		"format-critical": "BAT {capacity}%",
+		"format-plugged": "BAT <span color='#00FF00'>{capacity}</span><span color='#00FFFF'>%</span> <span color='#00FF00'></span>",
+		"format-charging": "BAT <span color='#00FF00'>+{capacity}</span><span color='#00FFFF'>%</span> <span color='#00FF00'></span>",
         "format-alt": "{icon}  {time}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
         "format-icons": [" ", " ", " ", " ", " "]
     },
 
