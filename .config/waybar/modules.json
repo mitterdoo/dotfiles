@@ -55,9 +55,9 @@
     },
 
 	"custom/update": {
-		"exec": "~/.config/custom/scripts/update.sh",
+		"exec": "~/.config/custom/scripts/update-check/update.sh",
 		"return-type": "json",
-		"interval": 900,
+		"interval": 5,
 		"signal": 13,
 		"on-click": "hyprctl dispatch exec [float] 'kitty -e ~/.config/custom/scripts/update-run.sh'",
 		"on-click-right": "pkill -RTMIN+13 waybar"

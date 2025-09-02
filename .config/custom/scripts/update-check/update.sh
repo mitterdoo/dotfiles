@@ -1,6 +1,6 @@
 #!/bin/bash
 
-updates=$(checkupdates; paru -Qum)
+updates=$(/home/ranthos/.config/custom/scripts/update-check/check-all-updates.sh)
 line_count=$(printf '%s' "$updates" | grep -c '^')
 
 plural=""

@@ -118,9 +118,9 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="793.700787401575"
-         height="590.505736343504"
-         ry="7.99999957948219" />
+         width="727.943778451034"
+         height="795.250119186762"
+         ry="0" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -156,13 +156,15 @@
          end="0"
          start="0"
          usecurrent="1"
-         rx="166.471432663324"
-         ry="106.020913912555" />
+         rx="20.4507668562762"
+         ry="20.4507668562762" />
       <eventcontext
          id="star"
-         magnitude="5"
+         magnitude="7"
          style="fill:yellow;"
-         usecurrent="1" />
+         usecurrent="1"
+         proportion="0.330703920084396"
+         isflatsided="0" />
       <eventcontext
          id="spiral"
          style="fill:none;stroke:black"
@@ -331,7 +333,7 @@
        pathflash_unselected="0"
        pathflash_timeout="500"
        show_handles="1"
-       show_outline="0"
+       show_outline="1"
        sculpting_profile="1"
        single_node_transform_handles="0"
        show_transform_handles="0"
@@ -612,7 +614,7 @@
        h="500"
        w="300"
        layout="0"
-       panedpos="494" />
+       panedpos="470" />
     <group
        id="find" />
     <group
@@ -643,7 +645,7 @@
          id="defaultxdpi" />
       <group
          id="batchexportarea"
-         value="layer" />
+         value="selection" />
       <group
          id="defaultdpi"
          value="801.77001953125" />
@@ -653,24 +655,24 @@
        default="org.inkscape.output.svg.inkscape"
        append_extension="1"
        enable_preview="1"
-       path="/home/ranthos/Code/reverse-eng/Toliss A320/fonts/inkscape"
+       path="/home/ranthos/Pictures/vector"
        use_current_dir="1"
        enable_svgexport="0" />
     <group
        id="save_copy"
-       default="org.inkscape.output.svg.inkscape"
+       default="org.inkscape.output.svg.plain"
        append_extension="1"
        enable_preview="1"
-       path="/home/ranthos/Code/reverse-eng/Toliss A320/fonts"
+       path="/home/ranthos/Pictures/vector"
        enable_svgexport="0" />
     <group
        id="open"
        enable_preview="1"
-       path="/home/ranthos/Pictures/" />
+       path="/run/media/ranthos/easystore/win11-c/Users/conno/Documents/3D Printing/miniMIA/miniMIA DESIGNS/" />
     <group
        id="import"
        enable_preview="1"
-       path="/home/ranthos/Downloads/"
+       path="/home/ranthos/Pictures/"
        ask="1"
        ask_svg="1"
        link="embed"
@@ -1081,10 +1083,11 @@
      org.inkscape.typography.setup_typography_canvas.caps="850"
      org.inkscape.typography.setup_typography_canvas.descender="100"
      org.inkscape.typography.setup_typography_canvas.__live_effect__="0"
-     org.inkscape.typography.new_glyph_layer.text="Δ" />
+     org.inkscape.typography.new_glyph_layer.text="Δ"
+     org.inkscape.input.svg.scale="auto" />
   <group
      id="desktop"
-     style="fill:none;text-orientation:auto;-inkscape-font-specification:'HUN-din 1451, ';font-family:'HUN-din 1451';font-size:85.33333333px;line-height:1.2;letter-spacing:0px;stroke-linecap:round;stroke-width:22;stroke:#000000">
+     style="fill:none;text-orientation:auto;-inkscape-font-specification:'Monaspace Neon';font-family:'Monaspace Neon';font-size:21.33333333px;line-height:1;letter-spacing:0px;paint-order:markers stroke fill;stop-color:#000000;stroke-width:8">
     <group
        width="1272"
        height="701"
