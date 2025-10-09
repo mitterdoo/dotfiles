@@ -5,9 +5,9 @@
 }
 
 #waybar {
-    font-family: "AIR3508-ZS", "AIR3508", sans-serif;
+    font-family: Iosevka Fixed, "AIR3508-ZS", "AIR3508", sans-serif;
 	font-weight: normal;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 window#waybar {
