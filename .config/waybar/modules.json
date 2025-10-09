@@ -74,6 +74,10 @@
 		"return-type": "",
 		"interval": 1
 	},
+
+	"custom/hostname": {
+		"exec": "uname -n | tr '[a-z]' '[A-Z]'"
+	},
 	
 	"custom/gpu-usage": {
 		// "format": "GPU {usage}%/{temp}*",
