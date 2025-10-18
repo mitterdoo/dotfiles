@@ -4,7 +4,9 @@ DATAFILE_TIME="last_checked"
 DATAFILE_CACHE="cache"
 
 # in seconds
-CACHE_FREQUENCY=3600
+CACHE_FREQUENCY=432000
+# was 3600 for 1 hr
+# now 5 days cause fuck updates
 
 function ensure_valid_folder {
 	mkdir -p "$DATAFILE_DIR"
