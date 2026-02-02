@@ -88,13 +88,13 @@
 
     // CPU
     "cpu": {
-        "format": "CPU <span color='#00FF00'>{usage}</span><span color='#00FFFF'>%</span>",
+        "format": "CPU <span color='#00FF00'>{usage}</span><span color='#00AAFF'>%</span>",
         "on-click": "hyprctl dispatch exec [float] 'kitty -e htop'"
     },
 
     // Memory
     "memory": {
-        "format": "RAM <span color='#00FF00'>{percentage}</span><span color='#00FFFF'>%</span> / <span color='#00FF00'>{used:0.1f}</span><span color='#00FFFF'> GB</span>",
+        "format": "RAM <span color='#00FF00'>{percentage}</span><span color='#00AAFF'>%</span> / <span color='#00FF00'>{used:0.1f}</span><span color='#00AAFF'> GB</span>",
         "on-click": "hyprctl dispatch exec [float] 'kitty -e htop --sort-key=PERCENT_MEM'",
 		"interval": 10
     },
@@ -131,7 +131,7 @@
    // Network
     "network": {
         "format": "{ifname}",
-        "format-wifi": "NET <span color='#FF7F00'>WIFI</span> <span color='#00FF00'>{signalStrength}</span><span color='#00FFFF'>%</span>",
+        "format-wifi": "NET <span color='#FF7F00'>WIFI</span> <span color='#00FF00'>{signalStrength}</span><span color='#00AAFF'>%</span>",
         "format-ethernet": "NET <span color='#00FF00'>ETH</span>",
         "format-disconnected": "NET <span color='#FF0000'>DISC</span>", //An empty format will hide the module.
         "tooltip-format": " {ifname} via {gwaddri}",
@@ -161,10 +161,10 @@
     // pipewire
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "SND <span color='#00FF00'>{volume}</span><span color='#00FFFF'>%</span>",
-        "format-bluetooth": "SND <span color='#00FF00'>{volume}</span><span color='#00FFFF'>% BLT</span> <span color='#00FF00'>{format_source}</span>",
-        "format-bluetooth-muted": "SND <span color='#FF7F00'>MUT</span> <span color='#00FF00'>{volume}</span><span color='#00FFFF'>% BLT</span> <span color='#00FF00'>{format_source}</span>",
-        "format-muted": "SND <span color='#FF7F00'>MUT</span> <span color='#00FF00'>{volume}</span><span color='#00FFFF'>%</span>",
+        "format": "SND <span color='#00FF00'>{volume}</span><span color='#00AAFF'>%</span>",
+        "format-bluetooth": "SND <span color='#00FF00'>{volume}</span><span color='#00AAFF'>% BLT</span> <span color='#00FF00'>{format_source}</span>",
+        "format-bluetooth-muted": "SND <span color='#FF7F00'>MUT</span> <span color='#00FF00'>{volume}</span><span color='#00AAFF'>% BLT</span> <span color='#00FF00'>{format_source}</span>",
+        "format-muted": "SND <span color='#FF7F00'>MUT</span> <span color='#00FF00'>{volume}</span><span color='#00AAFF'>%</span>",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
