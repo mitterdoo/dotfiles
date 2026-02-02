@@ -6,9 +6,10 @@
 
 #waybar {
     /* font-family: Iosevka Fixed, "AIR3508-ZS", "AIR3508", sans-serif; */
-    font-family: "AIR3508-ZSSemiCond", "AIR3508", sans-serif;
+    font-family: "TX-02", "AIR3508-ZSSemiCond", "AIR3508", sans-serif;
+	font-stretch: semi-condensed;
 	font-weight: normal;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 window#waybar {
