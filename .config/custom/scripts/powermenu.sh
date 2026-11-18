@@ -1,2 +1,2 @@
 #!/bin/bash
-systemctl $(echo -e "poweroff\nreboot" | fuzzel --dmenu)
+systemctl $(echo -e "poweroff\nreboot\nsleep" | fuzzel --dmenu)

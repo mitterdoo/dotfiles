@@ -60,3 +60,6 @@ font-feature = -calt
 
 background-opacity = 0.85
 background-blur-radius = 40
+
+gtk-single-instance = false
+working-directory = inherit

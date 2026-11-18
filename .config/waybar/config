@@ -21,14 +21,12 @@
 		"custom/hostname"
     ],
     "modules-right": [
-        "mpd", 
         "pulseaudio", 
         "network", 
         "cpu", 
 		"custom/gpu-usage",
         "memory", 
         "keyboard-state", 
-        "battery", 
 		"custom/update",
         "tray",
         "clock", 

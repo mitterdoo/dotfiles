@@ -59,7 +59,7 @@
 		"return-type": "json",
 		"interval": 5,
 		"signal": 13,
-		"on-click": "hyprctl dispatch exec [float] 'kitty -e ~/.config/custom/scripts/update-run.sh'",
+		"on-click": "hyprctl dispatch exec [float] 'ghostty -e ~/.config/custom/scripts/update-run.sh'",
 		"on-click-right": "pkill -RTMIN+13 waybar"
 	},
 

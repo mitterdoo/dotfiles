@@ -4,6 +4,8 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=0
 
+autocmd FileType yaml setlocal et ts=2 ai sw=2 nu sts=0
+
 set smartindent
 
 " fix vim requiring saving when switching buffers (even though they remain
@@ -35,6 +37,10 @@ set hlsearch " highlight all search matches
 
 set noshowmode
 
+" visible leading spaces and tabs
+set list
+set listchars=tab:>-,space:.
+
 " disable hard-wrapping inserting newlines
 setlocal textwidth=0
 
@@ -48,6 +54,10 @@ highlight Comment term=italic cterm=italic gui=italic
 highlight Search ctermbg=DarkMagenta ctermfg=Black
 highlight Normal ctermbg=black guibg=Black
 highlight NonText ctermbg=black guibg=Black
+highlight SpecialKey ctermfg=18 guifg=DarkBlue
+
+
+let g:airline#extensions#whitespace#enabled = 0
 
 
 set mouse=a " legacy needs

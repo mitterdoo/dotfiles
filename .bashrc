@@ -13,7 +13,8 @@ export PS1="\[\e[38;5;39m\e[1m\]\u\[\e[0m\e[38;5;81m\]@\[\e[38;5;77m\e[1m\]\h \[
 # fuzzy finder
 eval "$(fzf --bash)"
 
-HCONF="/home/ranthos/.config/hypr/hyprland.conf"
+HCONF="/home/ranthos/.config/hypr/hyprland.lua"
+SCONF="/home/ranthos/.config/sway/config"
 NVCONF="/home/ranthos/.config/nvim/lua/config/prefs.lua"
 
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
